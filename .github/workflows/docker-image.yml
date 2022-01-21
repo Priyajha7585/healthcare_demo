@@ -11,8 +11,11 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    default: 
+      run: 
+        working-directory: ./backend
 
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build . 
