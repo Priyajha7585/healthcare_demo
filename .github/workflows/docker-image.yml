@@ -25,7 +25,7 @@ jobs:
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
     
     - name: Build the Docker image
-      run: docker build -t healthcare_image .
+      run: docker build -t healthcare_demo .
     - name: Pushing the image to docker hub
-      run: docker push healthcare_image
+      run: docker push healthcare_demo
 
